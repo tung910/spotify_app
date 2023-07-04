@@ -43,7 +43,7 @@ class GetStartedScreen extends StatelessWidget {
           style:
               TextStyle(fontSize: 14, color: Color.fromRGBO(255, 255, 255, 1)),
         ),
-        ButtonWidget(title: 'Get Started', onPressed: onPressed),
+        ButtonWidget(title: 'Get Started', onPressed: () => onPressed(context)),
       ],
     ));
   }
