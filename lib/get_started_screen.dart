@@ -1,56 +1,49 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:spotify/Widgets/button.dart';
 
 @RoutePage()
 class GetStartedScreen extends StatelessWidget {
   const GetStartedScreen({Key? key}) : super(key: key);
+  onPressed(context) {
+    AutoRouter.of(context).pushNamed('/login');
+  }
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Column(
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Container(
-            decoration: const BoxDecoration(
-                gradient: LinearGradient(
-              begin: Alignment.topRight,
-              end: Alignment.bottomRight,
-              colors: <Color>[
-                Color(0xff0f0e0e),
-                Color(0xff0f0e0e),
-                Color(0xff0f0e0e),
-                Color(0xff0f0e0e),
-                Color(0xff0f0e0e),
-                Color(0xff0f0e0e),
-                Color(0xff0f0e0e),
-                Color(0xfff0f0f0),
-                Color(0xfff0f0f0),
-              ], // Gradient from https://learnui.design/tools/gradient-generator.html
-              tileMode: TileMode.mirror,
-            )),
-            child: Image.asset(
-              'assets/images/Spotify_Logo_RGB_Green.png',
-              width: 133,
-              height: 40,
-            )),
-        Container(
-          padding: EdgeInsets.symmetric(horizontal: 103, vertical: 10),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(80),
-            color: const Color(0xFF42C83C),
-          ),
-          child: TextButton(
-            onPressed: () {
-              AutoRouter.of(context).pushNamed('/login');
-            },
-            child: const Text('Get Started',
-                style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.black)),
-          ),
-        )
+        Image.asset(
+          'assets/images/Spotify_Logo_RGB_Green.png',
+          width: 133,
+          height: 40,
+        ),
+        // Expanded(
+        //   child: GridView.builder(
+        //     itemCount: 20,
+        //     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        //         crossAxisCount: 4, crossAxisSpacing: 12, mainAxisSpacing: 12.0),
+        //     itemBuilder: (BuildContext context, int index) {
+        //       return Container(
+        //         width: 12,
+        //         height: 12,
+        //         color: Colors.red,
+        //       );
+        //     },
+        //   ),
+        // ),
+        const Text(
+          'Music for everyone',
+          style: TextStyle(fontSize: 24, color: Color.fromRGBO(30, 215, 96, 1)),
+        ),
+        const Text(
+          'Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. ',
+          style:
+              TextStyle(fontSize: 14, color: Color.fromRGBO(255, 255, 255, 1)),
+        ),
+        ButtonWidget(title: 'Get Started', onPressed: onPressed),
       ],
     ));
   }

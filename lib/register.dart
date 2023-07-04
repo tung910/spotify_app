@@ -4,8 +4,8 @@ import 'package:spotify/Widgets/Input.dart';
 import 'package:spotify/Widgets/button.dart';
 
 @RoutePage()
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class RegisterScreen extends StatelessWidget {
+  const RegisterScreen({Key? key}) : super(key: key);
   handleLogin() {}
   @override
   Widget build(BuildContext context) {
@@ -26,11 +26,8 @@ class LoginScreen extends StatelessWidget {
         color: const Color(0xff0f0e0e),
         child: Column(
           children: [
-            const SizedBox(
-              height: 80,
-            ),
             const Text(
-              'Log In',
+              'Register',
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 24,
@@ -64,7 +61,16 @@ class LoginScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 40),
               child: InputField(
-                hintText: 'Enter Username or Email',
+                hintText: 'Full Name',
+              ),
+            ),
+            const SizedBox(
+              height: 32,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40),
+              child: InputField(
+                hintText: 'Enter Email',
               ),
             ),
             const SizedBox(
@@ -85,17 +91,15 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(
               height: 16,
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 40),
-              child: Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  'Forgot password?',
-                  style: TextStyle(
-                    color: Color.fromRGBO(255, 255, 255, 1),
-                    fontSize: 12,
-                    decoration: TextDecoration.underline,
-                  ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40),
+              child: InputField(
+                hintText: 'Repeat Password',
+                keyboardType: TextInputType.visiblePassword,
+                suffixIcon: const Icon(
+                  Icons.remove_red_eye_outlined,
+                  color: Color.fromRGBO(91, 91, 91, 1),
+                  size: 23,
                 ),
               ),
             ),
@@ -105,7 +109,7 @@ class LoginScreen extends StatelessWidget {
             Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 40),
                 child: ButtonWidget(
-                  title: 'Log In',
+                  title: 'Register',
                   onPressed: handleLogin,
                 )),
             Padding(
@@ -184,7 +188,7 @@ class LoginScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  "Don't Have An Account? ",
+                  "Have An A ccount? ",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 12,
@@ -192,15 +196,13 @@ class LoginScreen extends StatelessWidget {
                 ),
                 GestureDetector(
                   child: const Text(
-                    'Register',
+                    'Login',
                     style: TextStyle(
                         color: Color.fromRGBO(215, 189, 30, 1),
                         fontSize: 12,
                         fontWeight: FontWeight.w600),
                   ),
-                  onTap: () => {
-                    AutoRouter.of(context).pushNamed('/register')
-                  },
+                  onTap: () => {AutoRouter.of(context).pop()},
                 )
               ],
             ),
