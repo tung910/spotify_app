@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spotify/route/index.dart';
+import 'package:spotify/routes/index.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,7 +22,6 @@ class MyApp extends StatelessWidget {
   final _appRouter = AppRouter();
   MaterialColor green = MaterialColor(0xff42C83C, _greenShades);
 
-
   MyApp({super.key});
   // This widget is the root of your application.
   @override
@@ -31,7 +30,10 @@ class MyApp extends StatelessWidget {
       title: 'Spotify',
       routerConfig: _appRouter.config(),
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: green, textTheme: const TextTheme(headline2: TextStyle(color: Colors.white))),
+      theme: ThemeData(
+          primarySwatch: green,
+          textTheme:
+              const TextTheme(headline2: TextStyle(color: Colors.white))),
     );
   }
 }

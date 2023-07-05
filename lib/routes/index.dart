@@ -1,5 +1,5 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:spotify/route/index.gr.dart';
+import 'package:spotify/routes/index.gr.dart';
 
 @AutoRouterConfig(replaceInRouteName: 'Screen,Route')
 class AppRouter extends $AppRouter {

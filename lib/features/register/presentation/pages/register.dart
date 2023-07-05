@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:spotify/Widgets/Input.dart';
-import 'package:spotify/Widgets/button.dart';
+import 'package:spotify/widgets/Input.dart';
+import 'package:spotify/widgets/button.dart';
 
 @RoutePage()
 class RegisterScreen extends StatelessWidget {

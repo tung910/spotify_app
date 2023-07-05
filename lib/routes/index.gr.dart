@@ -9,10 +9,12 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i5;
-import 'package:spotify/get_started_screen.dart' as _i1;
-import 'package:spotify/intro.dart' as _i2;
-import 'package:spotify/login.dart' as _i3;
-import 'package:spotify/register.dart' as _i4;
+import 'package:spotify/features/login/presentation/pages/get_started_screen.dart'
+    as _i1;
+import 'package:spotify/features/login/presentation/pages/intro.dart' as _i2;
+import 'package:spotify/features/login/presentation/pages/login.dart' as _i3;
+import 'package:spotify/features/register/presentation/pages/register.dart'
+    as _i4;
 
 abstract class $AppRouter extends _i5.RootStackRouter {
   $AppRouter({super.navigatorKey});
