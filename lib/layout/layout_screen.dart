@@ -1,40 +1,58 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
-@RoutePage()
 class Layout extends StatelessWidget {
-  const Layout({Key? key}) : super(key: key);
-
+  const Layout({Key? key, required this.children}) : super(key: key);
+  final Widget children;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          leading: const Padding(
+            padding: EdgeInsets.only(left: 32),
+            child: Icon(Icons.search),
+          ),
           title: Image.asset(
             'assets/images/Spotify_Logo_RGB_Green.png',
             width: 133,
             height: 40,
           ),
+          leadingWidth: 32,
           centerTitle: true,
           elevation: 0,
+          actions: const [
+            Icon(Icons.settings_outlined),
+            SizedBox(
+              width: 32,
+            )
+          ],
         ),
-        body: SingleChildScrollView(
-            child: Column(
-          children: const [],
-        )),
+        body: SingleChildScrollView(child: children!),
         bottomNavigationBar: BottomNavigationBar(
+          fixedColor: const Color.fromRGBO(66, 200, 60, 1),
+          showUnselectedLabels: true,
+          unselectedItemColor: const Color.fromRGBO(255, 255, 255, 0.6),
           onTap: (index) {},
-          items: const [
-            BottomNavigationBarItem(
-              label: 'Users',
-              icon: Icon(Icons.u_turn_left),
+          items: [
+            const BottomNavigationBarItem(
+              label: 'Home',
+              icon: Icon(Icons.home),
+            ),
+            const BottomNavigationBarItem(
+              label: 'Playlist',
+              icon: Icon(Icons.playlist_add_check),
             ),
             BottomNavigationBarItem(
-              label: 'Posts',
-              icon: Icon(Icons.u_turn_left),
+              label: '',
+              icon: Image.asset('assets/images/logo.png',
+                  width: 64, height: 64, fit: BoxFit.cover),
             ),
-            BottomNavigationBarItem(
-              label: 'Settings',
-              icon: Icon(Icons.u_turn_left),
+            const BottomNavigationBarItem(
+              label: 'History',
+              icon: Icon(Icons.history_outlined),
+            ),
+            const BottomNavigationBarItem(
+              label: 'Profile',
+              icon: Icon(Icons.person),
             ),
           ],
         ));

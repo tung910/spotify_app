@@ -9,54 +9,68 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i6;
+import 'package:spotify/features/home/presentation/pages/home.dart' as _i1;
 import 'package:spotify/features/login/presentation/pages/get_started_screen.dart'
-    as _i1;
-import 'package:spotify/features/login/presentation/pages/intro.dart' as _i2;
-import 'package:spotify/features/login/presentation/pages/login.dart' as _i3;
+    as _i2;
+import 'package:spotify/features/login/presentation/pages/intro.dart' as _i3;
+import 'package:spotify/features/login/presentation/pages/login.dart' as _i4;
 import 'package:spotify/features/register/presentation/pages/register.dart'
-    as _i4;
-import 'package:spotify/layout/layout_screen.dart' as _i5;
+    as _i5;
 
 abstract class $AppRouter extends _i6.RootStackRouter {
   $AppRouter({super.navigatorKey});
 
   @override
   final Map<String, _i6.PageFactory> pagesMap = {
+    HomeRoute.name: (routeData) {
+      return _i6.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i1.HomeScreen(),
+      );
+    },
     GetStartedRoute.name: (routeData) {
       return _i6.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i1.GetStartedScreen(),
+        child: const _i2.GetStartedScreen(),
       );
     },
     IntroRoute.name: (routeData) {
       return _i6.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i2.IntroScreen(),
+        child: const _i3.IntroScreen(),
       );
     },
     LoginRoute.name: (routeData) {
       return _i6.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i3.LoginScreen(),
+        child: const _i4.LoginScreen(),
       );
     },
     RegisterRoute.name: (routeData) {
       return _i6.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i4.RegisterScreen(),
-      );
-    },
-    Layout.name: (routeData) {
-      return _i6.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i5.Layout(),
+        child: const _i5.RegisterScreen(),
       );
     },
   };
 }
 
 /// generated route for
-/// [_i1.GetStartedScreen]
+/// [_i1.HomeScreen]
+class HomeRoute extends _i6.PageRouteInfo<void> {
+  const HomeRoute({List<_i6.PageRouteInfo>? children})
+      : super(
+          HomeRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'HomeRoute';
+
+  static const _i6.PageInfo<void> page = _i6.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i2.GetStartedScreen]
 class GetStartedRoute extends _i6.PageRouteInfo<void> {
   const GetStartedRoute({List<_i6.PageRouteInfo>? children})
       : super(
@@ -70,7 +84,7 @@ class GetStartedRoute extends _i6.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i2.IntroScreen]
+/// [_i3.IntroScreen]
 class IntroRoute extends _i6.PageRouteInfo<void> {
   const IntroRoute({List<_i6.PageRouteInfo>? children})
       : super(
@@ -84,7 +98,7 @@ class IntroRoute extends _i6.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i3.LoginScreen]
+/// [_i4.LoginScreen]
 class LoginRoute extends _i6.PageRouteInfo<void> {
   const LoginRoute({List<_i6.PageRouteInfo>? children})
       : super(
@@ -98,7 +112,7 @@ class LoginRoute extends _i6.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i4.RegisterScreen]
+/// [_i5.RegisterScreen]
 class RegisterRoute extends _i6.PageRouteInfo<void> {
   const RegisterRoute({List<_i6.PageRouteInfo>? children})
       : super(
@@ -107,20 +121,6 @@ class RegisterRoute extends _i6.PageRouteInfo<void> {
         );
 
   static const String name = 'RegisterRoute';
-
-  static const _i6.PageInfo<void> page = _i6.PageInfo<void>(name);
-}
-
-/// generated route for
-/// [_i5.Layout]
-class Layout extends _i6.PageRouteInfo<void> {
-  const Layout({List<_i6.PageRouteInfo>? children})
-      : super(
-          Layout.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'Layout';
 
   static const _i6.PageInfo<void> page = _i6.PageInfo<void>(name);
 }
