@@ -15,14 +15,12 @@ class RegisterScreen extends StatelessWidget {
           title: Image.asset('assets/images/Spotify_Logo_RGB_Green.png',
               width: 133, height: 40, fit: BoxFit.fill),
           elevation: 0,
-          backgroundColor: const Color(0xff0f0e0e),
           leading: IconButton(
             icon: Image.asset('assets/icons/back.png'),
             onPressed: () => Navigator.of(context).pop(),
           )),
       body: Container(
-        width: double.infinity,
-        color: const Color(0xff0f0e0e),
+        width: MediaQuery.of(context).size.width,
         child: Column(
           children: [
             const Text(

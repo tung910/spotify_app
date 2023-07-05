@@ -10,7 +10,9 @@ class AppRouter extends $AppRouter {
           path: '/intro',
         ),
         AutoRoute(
-            page: GetStartedRoute.page, path: '/get-started', initial: true),
+          page: GetStartedRoute.page,
+          path: '/get-started', initial: true
+        ),
         AutoRoute(
           page: LoginRoute.page,
           path: '/login',
@@ -19,5 +21,6 @@ class AppRouter extends $AppRouter {
           page: RegisterRoute.page,
           path: '/register',
         ),
+        AutoRoute(page: Layout.page, path: '/home',  ),
       ];
 }

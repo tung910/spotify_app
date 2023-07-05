@@ -30,6 +30,12 @@ class MyApp extends StatelessWidget {
       title: 'Spotify',
       routerConfig: _appRouter.config(),
       debugShowCheckedModeBanner: false,
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        scaffoldBackgroundColor: Color.fromRGBO(0 ,0,0,1),
+        appBarTheme: AppBarTheme(backgroundColor: Color.fromRGBO(0 ,0,0,1)),
+        bottomNavigationBarTheme:  BottomNavigationBarThemeData(backgroundColor: Color.fromRGBO(0 ,0,0,1))
+      ), themeMode: ThemeMode.dark,
       theme: ThemeData(
           primarySwatch: green,
           textTheme:
