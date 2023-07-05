@@ -31,14 +31,12 @@ class MyApp extends StatelessWidget {
       routerConfig: _appRouter.config(),
       debugShowCheckedModeBanner: false,
       darkTheme: ThemeData(
-          brightness: Brightness.dark,
-          scaffoldBackgroundColor: const Color.fromRGBO(0, 0, 0, 1),
-          appBarTheme:
-              const AppBarTheme(backgroundColor: Color.fromRGBO(0, 0, 0, 1)),
-          bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-
-              backgroundColor: Color.fromRGBO(51, 51, 51, 1)),
-
+        brightness: Brightness.dark,
+        scaffoldBackgroundColor: const Color.fromRGBO(0, 0, 0, 1),
+        appBarTheme:
+            const AppBarTheme(backgroundColor: Color.fromRGBO(0, 0, 0, 1)),
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+            backgroundColor: Color.fromRGBO(51, 51, 51, 1)),
       ),
       themeMode: ThemeMode.dark,
       theme: ThemeData(

@@ -7,10 +7,7 @@ class Layout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          leading: const Padding(
-            padding: EdgeInsets.only(left: 32),
-            child: Icon(Icons.search),
-          ),
+          leading: Icon(Icons.search),
           title: Image.asset(
             'assets/images/Spotify_Logo_RGB_Green.png',
             width: 133,
@@ -21,9 +18,6 @@ class Layout extends StatelessWidget {
           elevation: 0,
           actions: const [
             Icon(Icons.settings_outlined),
-            SizedBox(
-              width: 32,
-            )
           ],
         ),
         body: SingleChildScrollView(child: children!),

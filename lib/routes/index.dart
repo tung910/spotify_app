@@ -21,6 +21,6 @@ class AppRouter extends $AppRouter {
           page: RegisterRoute.page,
           path: '/register',
         ),
-        AutoRoute(page:  HomeRoute.page, path: '/home', initial: true),
+        AutoRoute(page:  HomeRoute.page, path: '/home', initial: true, guards: []),
       ];
 }
