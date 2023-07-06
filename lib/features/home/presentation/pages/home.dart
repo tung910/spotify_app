@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:spotify/features/widgets/album.dart';
 import 'package:spotify/layout/layout_screen.dart';
 
 @RoutePage()
@@ -75,6 +76,21 @@ class HomeScreen extends StatelessWidget {
               fontSize: 24,
               fontWeight: FontWeight.w700,
             )),
+        const SizedBox(
+          height: 12,
+        ),
+        SizedBox(
+          height: 172,
+          child: ListView.separated(
+            separatorBuilder: (context, i) => const SizedBox(
+              width: 16,
+            ),
+            scrollDirection: Axis.horizontal,
+            shrinkWrap: true,
+            itemBuilder: (context, i) => Album(),
+            itemCount: 10,
+          ),
+        )
       ],
     ));
   }
